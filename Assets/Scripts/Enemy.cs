@@ -10,10 +10,14 @@ public class Enemy : MonoBehaviour
     public int goldToGive;
 
     public Image hpImage;
+    public Animation anim;
 
     public void Damage() {
         hp--;
         SetHpBar();
+
+        anim.Stop();
+        anim.Play();
 
         if (hp <= 0)Dead();
     }
@@ -23,6 +27,7 @@ public class Enemy : MonoBehaviour
     }
 
     public void Dead(){
+        GameManager.instance.AddGold(goldToGive);
         EnemyManager.instance.DestroyEnemy(gameObject);
     }
 }

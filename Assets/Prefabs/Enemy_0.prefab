@@ -166,6 +166,7 @@ GameObject:
   - component: {fileID: 614424462047261229}
   - component: {fileID: 614424462047261226}
   - component: {fileID: 614424462047261231}
+  - component: {fileID: 3289997090559353946}
   m_Layer: 5
   m_Name: Enemy_0
   m_TagString: Untagged
@@ -182,7 +183,7 @@ RectTransform:
   m_GameObject: {fileID: 614424462047261224}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 614424460298874762}
@@ -304,3 +305,20 @@ MonoBehaviour:
   hpMax: 10
   goldToGive: 10
   hpImage: {fileID: 614424461265547083}
+  anim: {fileID: 3289997090559353946}
+--- !u!111 &3289997090559353946
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 614424462047261224}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: e10306fa51a14d3419133696df5a62f0, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: e10306fa51a14d3419133696df5a62f0, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0

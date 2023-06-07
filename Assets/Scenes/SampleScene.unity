@@ -270,7 +270,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: x10
+  m_text: x0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -430,7 +430,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1073836480}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2122519998}
+        m_TargetAssemblyTypeName: ClickManager, Assembly-CSharp
+        m_MethodName: BuyAutoClicker
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1073836480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -776,7 +788,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Gold 1000
+  m_text: Gold 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
@@ -988,6 +1000,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2034858603}
   m_CullTransparentMesh: 1
+--- !u!114 &2058207578 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2542936858551292860, guid: d4a4c2ec2c9702e4fa8b7c098479f7e8, type: 3}
+  m_PrefabInstance: {fileID: 2542936858692975362}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd98fc26f418fb140b0a3e5f810642ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2122519994
 GameObject:
   m_ObjectHideFlags: 0
@@ -998,6 +1021,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2122519996}
   - component: {fileID: 2122519995}
+  - component: {fileID: 2122519997}
+  - component: {fileID: 2122519998}
   m_Layer: 0
   m_Name: _GameManager
   m_TagString: Untagged
@@ -1021,8 +1046,18 @@ MonoBehaviour:
   - {fileID: 614424462047261224, guid: 9190fec9e366a0d448520de595821518, type: 3}
   - {fileID: 5005742299640703961, guid: 65a61d5f22401eb429912ca6e09776a6, type: 3}
   - {fileID: 2542936858551292859, guid: d4a4c2ec2c9702e4fa8b7c098479f7e8, type: 3}
+  backgrounds:
+  - {fileID: 21300000, guid: 4e9e1fd17e4682b49b9807fb46f2b720, type: 3}
+  - {fileID: 21300000, guid: 40a229aac24aba842b61b2663bffd20d, type: 3}
+  - {fileID: 21300000, guid: 94f632cd7941eaf4688ad7a55a43aaad, type: 3}
+  - {fileID: 21300000, guid: 222f670d42ec8864dac08c0c409c93a0, type: 3}
+  - {fileID: 21300000, guid: 50c8577b150bf9d48ae2e574bdd545ac, type: 3}
   canvas: {fileID: 1679492775}
+  background: {fileID: 1839407288}
+  enemy: {fileID: 2058207578}
+  enemyLeft: 2
   currentEnemy: 2
+  currentBg: 0
 --- !u!4 &2122519996
 Transform:
   m_ObjectHideFlags: 0
@@ -1038,6 +1073,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2122519997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2122519994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11d15633495cfae4f8614f218eedf066, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gold: 0
+  goldText: {fileID: 1878886950}
+--- !u!114 &2122519998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2122519994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abf7e4ecb89ab0f48b5647decd53283c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoClickerText: {fileID: 612682520}
+  lastTimeClicked: []
+  price: 10
 --- !u!1001 &2542936858692975362
 PrefabInstance:
   m_ObjectHideFlags: 0
