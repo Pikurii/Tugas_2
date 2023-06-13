@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
    public int gold;
    public TextMeshProUGUI goldText;
+   
 
    public static GameManager instance;
 
@@ -23,4 +24,5 @@ public class GameManager : MonoBehaviour
     gold -= _gold;
     goldText.text = "Gold: " + gold;
    }
+
 }
